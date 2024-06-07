@@ -1,0 +1,14 @@
+{% extends "base.html.twig" %}
+{% block title %} List of users{% endblock %}
+
+{% block content %}
+    <h1>List of users</h1>
+    {% for user in users %}
+    <ul>
+        <li>First Name:{{ user.first_name }}</li>
+        <li>Last Name: {{ user.last_name }}</li>
+        <li>Email: {{ user.email }}</li>
+        <a href="/user/{{ user.user_id }}">User profile</a>
+    </ul>
+    {% endfor %}
+{% endblock %}
